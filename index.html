@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="vendor/fonts.css">
+    <link rel="stylesheet" href="pages/index.css">
+</head>
+<body class="root">
+    <div class="page">
+    <header class="header">
+        <img class="header__logo" src="images/logo.svg" >
+    </header>
+    <main class="main">
+        <section class ="profile">
+            <img src="./images/image.png" alt="Картинка_профиля" class="profile__avatar"/>
+            <div class="profile__info">
+              <h1 class="profile__username">Жак-Ив Кусто</h1>
+              <button type="button" class="profile__button profile__button_edit element-opacity"></button>
+              <p class="profile__position">Исследователь океана</p>
+            </div>
+            <button type="button" class="profile__button profile__button_add element-opacity"></button>
+          </section>
+        <section class="elements">
+            <div class="element">
+                <img class="element__photo"  src="./images/amsterdam .jpg">
+                <div class="element__fit">
+                <p class="element__text">Амстердам</p>
+                <button class="element__like element-opacity"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__photo" src="./images/london.jpg">
+                <div class="element__fit">
+                <p class="element__text">Лондон</p>
+                <button class="element__like element-opacity"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__photo" src="./images/paris.jpg">
+                <div class="element__fit">
+                <p class="element__text">Париж</p>
+                <button class="element__like element-opacity"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__photo" src="images/porto.jpg">
+                <div class="element__fit">
+                <p class="element__text">Порту</p>
+                <button class="element__like element-opacity"></button>
+                </div>
+            </div>
+            <div class="element">   
+                <img class="element__photo" src="images/rome.jpg">
+                <div  class="element__fit">
+                <p class="element__text">Рим</p>
+                <button class="element__like element-opacity"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__photo" src="images/strasbourg.jpg">
+                <div class="element__fit">
+                <p class="element__text">Страсбург</p>
+                <button class="element__like element-opacity"></button>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__author">&copy;2021. Юра Миронов</p>
+    </footer>
+    <div class="popup">
+        <div class="popup__container">
+          <button class="popup__close-button element-opacity" type="button"></button>
+          <h2 class="popup__header ">Редактировать профиль</h3>
+        <form class="popup__form">
+            <input class="popup__input popup__title" type="text" name="popup__title">
+            <input class="popup__input popup__subtitle" type="text" name="poput__subtitle">
+            <button class="popup__submit element-opacity" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

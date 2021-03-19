@@ -1,0 +1,5 @@
+.element__fit {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 22px 0 21px;
+}
