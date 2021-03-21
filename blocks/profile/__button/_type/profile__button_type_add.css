@@ -1,4 +1,4 @@
-.profile__button_add {
+.profile__button_type_add {
   margin: auto 0 auto auto;
   background-image: url(../../../../images/add_place.svg);
   background-position: center;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width:598px) {
-  .profile__button_add {
+  .profile__button_type_add {
     width: 100%;
     background-image: url(../../../../images/add_place_small.svg);
     margin: 36px auto 0;

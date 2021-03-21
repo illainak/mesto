@@ -1,4 +1,4 @@
-.profile__button_edit {
+.profile__button_type_edit {
   width: 24px;
   height: 24px;
   margin: auto 0 auto 18px;
@@ -9,10 +9,10 @@
 }
 
 @media screen and (max-width:598px) {
-  .profile__button_edit {
+  .profile__button_type_edit {
     width: 18px;
     height: 18px;
     margin: auto 0 0 10px;
-    /*Не понимаю что не так, все меняется согласно макету */
+    background-image: url(../../../../images/edit_img_small.svg);
   }
 }
