@@ -1,8 +1,7 @@
 .popup__container {
     position: relative;
-    top: calc(50% - 165px);
     left: calc(50% - 215px);
-    transform:  translateY(-50%);
+    transform:  translateY(50%);
     width: 430px;
     min-height: 330px;
     background-color: #fff;

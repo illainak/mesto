@@ -7,8 +7,8 @@ let closeButton = document.querySelector('.popup__close-button');
 
 let profileTitle = document.querySelector('.profile__username');
 let profileSubtitle = document.querySelector('.profile__position');
-let popupTitle = document.querySelector('.popup__title');
-let popupSubtitle = document.querySelector('.popup__subtitle');
+let popupTitle = document.querySelector('.popup__input-title');
+let popupSubtitle = document.querySelector('.popup__input-subtitle');
 
 function openPopup () {
     popup.classList.toggle('popup_opened');
