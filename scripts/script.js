@@ -55,13 +55,17 @@ function submitPopup(evt) {
     closePopup();
 }
 
+function cardList () {
+    initialCards.forEach(function(element){
+        const clonElement = templateElements.querySelector('.element').cloneNode(true);
+        clonElement.querySelector('.element__photo').src = element.link;
+        clonElement.querySelector('.element__text').textContent = element.name;
+        elements.append(clonElement);
+    })
+}
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
 popupContainer.addEventListener("submit", submitPopup);
+cardList();
 
-initialCards.forEach(function(element){
-    const clonElement = templateElements.querySelector('.element').cloneNode(true);
-    clonElement.querySelector('.element__photo').src = element.link;
-    clonElement.querySelector('.element__text').textContent = element.name;
-    elements.append(clonElement);
-})
+
