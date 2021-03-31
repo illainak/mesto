@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="pages/index.css">
 </head>
 <body class="root">
-
     <header class="header">
         <img class="header__logo" src="images/logo.svg"  alt="Логотип заголовка">
     </header>
@@ -21,56 +20,19 @@
               <p class="profile__position">Исследователь океана</p>
             </div>
             <button type="button" class="profile__button profile__button_type_add element-opacity"></button>
-            /*Не понимаю что не так, вроде как согласно БЭМу все */
           </section>
         <section class="elements">
-            <div class="element">
-                <img class="element__photo"  src="./images/amsterdam.jpg" alt="Амстердам">
-                <div class="element__fit">
-                <p class="element__text">Амстердам</p>
-                <button class="element__like element-opacity"></button>
-                </div>
-            </div>
-            <div class="element">
-                <!--Не понимаю что не так, тут тоже все по БЭМ, есть блок внутри него другой блок, дальше во вложенном блоке задаю элеменнты, какая связь должна быть между блоками*/ -->
-                <!--Все же я считаю что тут не блок и модификатор, а два блока elemenets и element(можно допустим обозвать его card чтобы не было путанницы), один вложенный в другой, и модификатор в названии класса тут не нужен--> 
-                <img class="element__photo" src="./images/london.jpg" alt="Лондон">
-                <div class="element__fit">
-                <p class="element__text">Лондон</p>
-                <button class="element__like element-opacity"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img class="element__photo" src="./images/paris.jpg" alt="Париж">
-                <div class="element__fit">
-                <p class="element__text">Париж</p>
-                <button class="element__like element-opacity"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img class="element__photo" src="images/porto.jpg" alt="Порто">
-                <div class="element__fit">
-                <p class="element__text">Порту</p>
-                <button class="element__like element-opacity"></button>
-                </div>
-            </div>
-            <div class="element">   
-                <img class="element__photo" src="images/rome.jpg" alt="Рим">
-                <div  class="element__fit">
-                <p class="element__text">Рим</p>
-                <button class="element__like element-opacity"></button>
-                </div>
-            </div>
+            <template class="templateElements">
             <div class="element">
                 <img class="element__photo" src="images/strasbourg.jpg" alt="Страсбург">
                 <div class="element__fit">
-                <p class="element__text">Страсбург</p>
-                <button class="element__like element-opacity"></button>
+                    <p class="element__text">Страсбург</p>
+                    <button class="element__like element-opacity"></button>
                 </div>
-            </div>
+                </div>
+            </template>
         </section>
     </main>
-
     <footer class="footer">
         <p class="footer__author">&copy;2021. Юра Миронов</p>
     </footer>
