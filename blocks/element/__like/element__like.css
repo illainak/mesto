@@ -5,6 +5,7 @@
     height: 19px;
     margin-top: 10px;
     padding-right: 16px;
+    padding-bottom: 19px;
     background-size: cover;
     background-image: url("../../../images/add_like.svg");
 }
