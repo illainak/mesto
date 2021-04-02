@@ -70,7 +70,7 @@ function submitPopup(evt) {
     evt.preventDefault()
     profileTitle.textContent=popupTitle.value;
     profileSubtitle.textContent=popupSubtitle.value;
-    closePopup();
+    closePopup(popupEdit);
 }
 
 
