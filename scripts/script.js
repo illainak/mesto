@@ -3,6 +3,8 @@ const popupEdit = document.querySelector('.popup__type_edit');
 const popupAdd = document.querySelector('.popup__type_add-card');
 const popupImage = document.querySelector('.popup__type_image');
 const popupContainer = document.querySelector('.popup__container');
+const popupAddForm = document.querySelector('.popup__form');
+const popupAddImgForm = document.querySelector('.popup__form-type-card')
 
 //находим кнопки открытия окон
 const editButton = document.querySelector('.profile__button_type_edit');
@@ -16,7 +18,7 @@ const closeAddButton = popupAdd.querySelector('.popup__close-button');
 const profileTitle = document.querySelector('.profile__username');
 const profileSubtitle = document.querySelector('.profile__position');
 const addListItemDescription = popupAdd.querySelector('.popup__input_type_description');
-const addListItemLink = popupAdd.querySelector(' popup__input_type_link');
+const addListItemLink = popupAdd.querySelector('.popup__input_type_link');
 const popupTitle = document.querySelector('.popup__input_type_title');
 const popupSubtitle = document.querySelector('.popup__input_type_subtitle');
 
@@ -51,8 +53,6 @@ const initialCards = [
     }
 ];
 
-
-
 //функция открытия попапа
 function openPopup (modal) {
     modal.classList.toggle('popup_opened');
@@ -73,7 +73,6 @@ function submitPopup(evt) {
     closePopup(popupEdit);
 }
 
-
 function cardList () {
     initialCards.forEach(function(element){
         const clonElement = templateElements.querySelector('.element').cloneNode(true);
@@ -83,25 +82,23 @@ function cardList () {
     })
 }
 
-
 const formSubmitHandler = e => {
     e.preventDefault()
     const inputValue = addListItemDescription.value;
+    const linkValue = addListItemLink.value;
     const clonElement = templateElements.querySelector('.element').cloneNode(true);
     clonElement.querySelector('.element__text').textContent = inputValue;
-    console.log(inputValue);
-    elements.append(clonElement);
-    closePopup();
+    clonElement.querySelector('.element__photo').src = linkValue;
+    elements.prepend(clonElement);
+    closePopup(popupAdd);
 }
-
-
-
 
 editButton.addEventListener('click', () => openPopup(popupEdit));
 addButton.addEventListener('click', () => openPopup(popupAdd));
 closeEditButton.addEventListener('click', () => closePopup(popupEdit));
 closeAddButton.addEventListener('click', () => closePopup(popupAdd));
-popupContainer.addEventListener("submit", submitPopup);
+popupAddForm.addEventListener("submit", submitPopup);
+popupAddImgForm.addEventListener("submit", formSubmitHandler);
 cardList();
 
 
