@@ -24,6 +24,7 @@ const popupSubtitle = document.querySelector('.popup__input_type_subtitle');
 
 const templateElements = document.querySelector('.templateElements').content;
 const elements = document.querySelector('.elements');
+const delButton = templateElements.querySelector('.element__button-delete');
 
 //массив для генерации карточек
 const initialCards = [
