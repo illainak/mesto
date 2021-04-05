@@ -2,7 +2,6 @@
 const popupEdit = document.querySelector('.popup__type_edit');
 const popupAdd = document.querySelector('.popup__type_add-card');
 const popupImage = document.querySelector('.popup__type_image');
-const popupContainer = document.querySelector('.popup__container');
 const popupAddForm = document.querySelector('.popup__form');
 const popupAddImgForm = document.querySelector('.popup__form-type-card')
 
@@ -24,7 +23,7 @@ const popupSubtitle = document.querySelector('.popup__input_type_subtitle');
 
 const templateElements = document.querySelector('.templateElements').content;
 const elements = document.querySelector('.elements');
-const delButton = templateElements.querySelector('.element__button-delete');
+const deleteButton = templateElements.querySelector('.element__button-delete');
 
 //массив для генерации карточек
 const initialCards = [
@@ -66,7 +65,7 @@ function closePopup (modal) {
     modal.classList.remove('popup_opened');
 }
 
-//функция
+//функция сабмита
 function submitPopup(evt) {
     evt.preventDefault()
     profileTitle.textContent=popupTitle.value;
@@ -82,6 +81,8 @@ function cardList () {
         elements.append(clonElement);
     })
 }
+
+
 
 const formSubmitHandler = e => {
     e.preventDefault()
@@ -101,5 +102,3 @@ closeAddButton.addEventListener('click', () => closePopup(popupAdd));
 popupAddForm.addEventListener("submit", submitPopup);
 popupAddImgForm.addEventListener("submit", formSubmitHandler);
 cardList();
-
-
