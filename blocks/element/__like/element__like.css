@@ -13,7 +13,7 @@
     outline: none;
 }
 
-.element__like:active {
+.element__like_active {
     opacity: 1;
     background-size: cover;
     background-image: url("../../../images/active_like.svg");

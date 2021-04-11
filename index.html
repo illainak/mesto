@@ -40,7 +40,7 @@
     </footer>
     <div class="popup popup__type_edit">
         <div class="popup__container">
-            <button class="popup__close-button element-opacity" type="button"></button>
+            <button class="popup__close-button popup__close-button-edit element-opacity" type="button"></button>
             <h2 class="popup__header ">Редактировать профиль</h2>
             <form class="popup__form" name="popup__form">
                 <input class="popup__input popup__input_type_title" type="text" name="popup__title">
@@ -51,7 +51,7 @@
     </div>
     <div class="popup popup__type_add-card">
         <div class="popup__container">
-            <button class="popup__close-button element-opacity" type="button"></button>
+            <button class="popup__close-button popup__close-button-add element-opacity" type="button"></button>
             <h2 class="popup__header ">Новое место</h2>
             <form class="popup__form popup__form-type-card" name="popup__form">
                 <input class="popup__input popup__input_type_description" type="text" name="popup__title" placeholder="Название">
@@ -61,10 +61,12 @@
         </div>
     </div>
     <div class="popup popup__type_image">
-        <div class="popup__container">
-            <button class="popup__close-button element-opacity" type="button"></button>
-            <img class="popup__image" src="" alt="">
-        </div>
+        <figure class="popup__container popup__container_type_image">
+            <button class="popup__close-button popup__close-button-img element-opacity" type="button"></button>
+            <img class="popup__image" alt="" src="">
+            <figcaption class="popup__caption"></figcaption>
+        </figure>
+
     </div>
     <script src="scripts/script.js"></script>
 </body>
