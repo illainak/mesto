@@ -102,7 +102,6 @@ function addCartInList(card) {
 
 function createCard(card) {
     const templateElement = templateCards.cloneNode(true);
-    const templateCardsTitle = templateElement.querySelector('.element__text').textContent = card.name;
     const templateCardImage = templateElement.querySelector('.element__photo');
     const btnLike = templateElement.querySelector('.element__like')
     templateCardImage.setAttribute('src', card.link);

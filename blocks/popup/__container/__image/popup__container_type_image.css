@@ -1,12 +1,4 @@
 .popup__container_type_image {
-    display: flex;
-    position: relative;
-    flex-direction: column;
     background-color: transparent;
-    align-self: center;
-    left: calc(50% - 215px);
-    transform:  translateY(50%);
-    height: 540px;
-    border-radius: 10px;
-    box-sizing: border-box;
+    padding: 0;
 }
