@@ -110,14 +110,13 @@ function createCard(card) {
 
     const cardDelete = templateElement.querySelector('.element__button-delete')
     cardDelete.addEventListener('click', handleDeleteCard);
-
-    const cardImage = templateElement.querySelector('.element__photo');
+    //const cardImage = templateElement.querySelector('.element__photo');
     const popupOpenImage = document.querySelector('.popup__image');
     const popupImageCaption = document.querySelector('.popup__caption');
     const popupCardTitle = templateElement.querySelector('.element__text');
     templateCardImage.setAttribute('alt', card.name);
-    cardImage.addEventListener('click', () => {
-        popupOpenImage.src = cardImage.src
+    templateCardImage.addEventListener('click', () => {
+        popupOpenImage.src = templateCardImage.src
         popupImageCaption.textContent = popupCardTitle.textContent;
         openPopup(popupImage)
     });
