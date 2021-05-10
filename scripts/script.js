@@ -109,11 +109,12 @@ function createCard(card) {
 
     const cardDelete = templateElement.querySelector('.element__button-delete')
     cardDelete.addEventListener('click', handleDeleteCard);
-
+    //В моем коде мне пришлось два раза определять картинки в переменные(templateCardImage и cardImage)
+    //Если я поменяю в коде переменную cardImage на templateCardImage то ломается логика подписи в попапе картинки, которую я хз как исправить
     const cardImage = templateElement.querySelector('.element__photo');
     const popupOpenImage = document.querySelector('.popup__image');
     const popupImageCaption = document.querySelector('.popup__caption');
-    const popupCardTitle = templateElement.querySelector('.element__text');
+    const popupCardTitle = templateElement.querySelector('.element__text').textContent = card.name;
     templateCardImage.setAttribute('alt', card.name);
     cardImage.addEventListener('click', () => {
         popupOpenImage.src = cardImage.src
